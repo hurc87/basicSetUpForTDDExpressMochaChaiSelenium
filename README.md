@@ -71,5 +71,14 @@ app.listen(3003, () => console.log('Hello world is listening to port 3003!!'));
     `<div id="message">Hello World</div>`
 
 - If the tests are not running and syntax is correct, check version of Chrome, as the webdriver requires the latest update of Chrome to run properly. 
-# basicSetUpForTDDExpressMochaChaiSelenium
-# basicSetUpForTDDExpressMochaChaiSelenium
+
+
+********************************************************************************
+
+Changes to code
+
+- At the top of the app.js file the following has been added :
+    app.use(express.static(__dirname));
+
+- This means that the app can point to a seperate html file using :
+    res.sendFile('index.html');
